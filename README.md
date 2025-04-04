@@ -1,17 +1,15 @@
 # Franck Tayo's Portfolio
 
-A 3D portfolio website showcasing my projects and skills, built with React, Three.js, and
-TailwindCSS.
-
 ## 🚀 Live Demo
 
-[View Portfolio](https://franck-tayo-portfolio.vercel.app)
+[View Portfolio](https://franckgou.netlify.app)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/01e50961-bb39-44e6-b94a-3669925893df/deploy-status)](https://app.netlify.com/sites/franckgou/deploys)
 
 ## ✨ Features
 
 - Interactive 3D elements using Three.js
 - Responsive design with Tailwind CSS
-- Contact form with EmailJS integration
+- Functional contact form with EmailJS integration
 - Project showcase with live demos
 - Experience timeline
 - Tech stack display
@@ -33,6 +31,7 @@ TailwindCSS.
 
 - Node.js
 - npm
+- EmailJS account
 
 ### Installation
 
@@ -49,12 +48,12 @@ cd portfolio-3d
 npm install
 ```
 
-3. Create a `.env` file and add your EmailJS credentials
+3. Set up environment variables
 
 ```env
+VITE_EMAILJS_PUBLIC_KEY=your_public_key
 VITE_EMAILJS_SERVICE_ID=your_service_id
 VITE_EMAILJS_TEMPLATE_ID=your_template_id
-VITE_EMAIL_JS_ACCESS_TOKEN=your_access_token
 ```
 
 4. Start the development server
@@ -63,9 +62,18 @@ VITE_EMAIL_JS_ACCESS_TOKEN=your_access_token
 npm run dev
 ```
 
+## 🚀 Deployment Status
+
+- ✅ Live at: https://franckgou.netlify.app
+- ✅ Contact form working
+- ✅ Environment variables configured
+- ✅ Continuous deployment enabled
+
 ## 📞 Contact
 
 - Email: tayofranck07@gmail.com
+- Phone: (678) 469-3055
+- Location: Atlanta, GA
 - LinkedIn: [Franck Tayo](https://www.linkedin.com/in/franck-cabrel-tayo-gouonpegne-407a44204/)
 - GitHub: [@Franckgou](https://github.com/Franckgou)
 

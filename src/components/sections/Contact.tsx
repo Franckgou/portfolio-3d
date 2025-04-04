@@ -8,7 +8,8 @@ import { slideIn } from '../../utils/motion';
 import { config } from '../../constants/config';
 import { Header } from '../atoms/Header';
 
-emailjs.init(import.meta.env.VITE_EMAILJS_ACCESS_TOKEN);
+// Initialize with public key
+emailjs.init(import.meta.env.VITE_EMAILJS_PUBLIC_KEY);
 
 const INITIAL_STATE = Object.fromEntries(
   Object.keys(config.contact.form).map(input => [input, ''])
@@ -17,7 +18,7 @@ const INITIAL_STATE = Object.fromEntries(
 const emailjsConfig = {
   serviceId: import.meta.env.VITE_EMAILJS_SERVICE_ID,
   templateId: import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
-  accessToken: import.meta.env.VITE_EMAILJS_ACCESS_TOKEN,
+  publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
 };
 
 const Contact = () => {
@@ -56,7 +57,7 @@ const Contact = () => {
           to_email: config.html.email,
           message: form.message,
         },
-        emailjsConfig.accessToken
+        emailjsConfig.publicKey // Use public key instead of access token
       )
       .then(
         result => {
