@@ -9,7 +9,7 @@ import { config } from '../../constants/config';
 import { Header } from '../atoms/Header';
 
 // Initialize with public key
-emailjs.init(import.meta.env.VITE_EMAILJS_PUBLIC_KEY);
+//emailjs.init(import.meta.env.VITE_EMAILJS_PUBLIC_KEY);
 
 const INITIAL_STATE = Object.fromEntries(
   Object.keys(config.contact.form).map(input => [input, ''])
@@ -51,23 +51,23 @@ const Contact = () => {
         emailjsConfig.serviceId,
         emailjsConfig.templateId,
         {
-          from_name: form.name, // Make sure these match your EmailJS template variables
+          from_name: form.name,
           to_name: config.html.fullName,
           from_email: form.email,
           to_email: config.html.email,
           message: form.message,
         },
-        emailjsConfig.publicKey // Use public key instead of access token
+        emailjsConfig.publicKey
       )
       .then(
         result => {
-          console.log('SUCCESS!', result.text); // Add logging
+          console.log('SUCCESS!', result.text);
           setLoading(false);
           alert('Thank you. I will get back to you as soon as possible.');
           setForm(INITIAL_STATE);
         },
         error => {
-          console.error('FAILED...', error); // Add error logging
+          console.error('FAILED...', error);
           setLoading(false);
           alert('Something went wrong.');
         }
