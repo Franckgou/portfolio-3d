@@ -1,35 +1,58 @@
-# 3D Portfolio
+# Franck Tayo's Portfolio
 
-<!-- GitHub badges -->
+A 3D portfolio website showcasing my projects and skills, built with React, Three.js, and
+TailwindCSS.
 
-[![Latest release](https://img.shields.io/github/v/release/ladunjexa/reactjs18-3d-portfolio?label=Latest%20release&style=social)](https://github.com/ladunjexa/reactjs18-3d-portfolio/releases/tag/v0.1.0)
-[![Stars](https://img.shields.io/github/stars/ladunjexa/reactjs18-3d-portfolio?style=social)](https://github.com/ladunjexa/reactjs18-3d-portfolio/stargazers)
-[![Fork](https://img.shields.io/github/forks/ladunjexa/reactjs18-3d-portfolio?style=social)](https://github.com/ladunjexa/reactjs18-3d-portfolio/forks)
-[![GitHub commits](https://img.shields.io/github/commit-activity/t/ladunjexa/reactjs18-3d-portfolio?style=social&logo=github)](https://github.com/ladunjexa/reactjs18-3d-portfolio/commits)
-[![Pull requests](https://img.shields.io/github/issues-pr/ladunjexa/reactjs18-3d-portfolio?style=social&logo=github)](https://github.com/ladunjexa/reactjs18-3d-portfolio/pulls)
+## Features
 
-![demo](.github/README_ASSETS/3d-portfolio.png)
+- 3D animations and interactive elements
+- Responsive design
+- Project showcase
+- Contact form with EmailJS integration
+- Skills and experience timeline
 
-[![ladunjexa](https://custom-icon-badges.demolab.com/badge/made%20by%20-ladunjexa-556bf2?logo=github&logoColor=white&labelColor=101827)](https://github.com/luadnjexa)
-[![License](https://img.shields.io/github/license/ladunjexa/reactjs18-3d-portfolio?color=dddddd&labelColor=000000)](https://github.com/ladunjexa/reactjs18-3d-portfolio/blob/main/LICENSE)
-[![Top Language](https://img.shields.io/github/languages/top/ladunjexa/reactjs18-3d-portfolio?logo=github&logoColor=%23007ACC&label=TypeScript)](https://www.typescriptlang.org/)
-[![Contributors](https://img.shields.io/github/contributors/ladunjexa/reactjs18-3d-portfolio?style=flat&color=orange&label=Contributors)](https://github.com/ladunjexa/reactjs18-3d-portfolio/graphs/contributors)
-![Release](https://img.shields.io/github/release/ladunjexa/reactjs18-3d-portfolio.svg)
-![PRs](https://img.shields.io/badge/PRs-welcome-ff69b4.svg?style=shields)
-![deployment](https://img.shields.io/github/deployments/ladunjexa/reactjs18-3d-portfolio/Production?logo=vercel&label=Website)
-[![Known Vulnerabilities](https://snyk.io/test/github/ladunjexa/reactjs18-3d-portfolio/badge.svg)](https://snyk.io/test/github/ladunjexa/reactjs18-3d-portfolio)
+## Tech Stack
 
-## 🌐 Live Demo
+- React
+- Three.js
+- TailwindCSS
+- EmailJS
+- Framer Motion
 
-Explore the live demonstration of the project:
-[reactjs18-3d-portfolio](https://reactjs18-3-d-portfolio.vercel.app/)
+## Setup
 
-## 📝 Description
+1. Clone the repository
 
-**3D Portfolio** is a well-designed and fully functional portfolio website that is built with
-React.js and Three.js. It is a fully responsive website that works well on all devices.
+```bash
+git clone https://github.com/Franckgou/portfolio-3d.git
+cd portfolio-3d
+```
 
-<details><summary><b>Folder Structure</b></summary>
+2. Install dependencies
+
+```bash
+npm install
+```
+
+3. Create a `.env` file with your EmailJS credentials
+
+```env
+VITE_EMAILJS_SERVICE_ID=your_service_id
+VITE_EMAILJS_TEMPLATE_ID=your_template_id
+VITE_EMAIL_JS_ACCESS_TOKEN=your_access_token
+```
+
+4. Run the development server
+
+```bash
+npm run dev
+```
+
+## Contact
+
+- Email: tayofranck07@gmail.com
+- LinkedIn: [Franck Tayo](https://www.linkedin.com/in/franck-cabrel-tayo-gouonpegne-407a44204/)
+- GitHub: [@Franckgou](https://github.com/Franckgou)
 
 ```bash
 reactjs18-3d-portfolio/

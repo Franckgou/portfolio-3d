@@ -33,62 +33,61 @@ type TConfig = {
   sections: {
     about: Required<TSection>;
     experience: TSection;
-    feedbacks: TSection;
+    education: TSection;
     works: Required<TSection>;
   };
 };
 
 export const config: TConfig = {
   html: {
-    title: "John Doe — 3D Portfolio",
-    fullName: "John Doe",
-    email: "johndoe@mail.com",
+    title: 'Franck Tayo — Portfolio',
+    fullName: 'Franck Cabrel Tayo Gouonpegne',
+    email: 'tayofranck07@gmail.com',
   },
   hero: {
-    name: "John Doe",
-    p: ["I develop 3D visuals, user", "interfaces and web applications"],
+    name: 'Franck Tayo',
+    p: ['I develop Full Stack Applications,', 'ML Solutions and Software Systems'],
   },
   contact: {
-    p: "Get in touch",
-    h2: "Contact.",
+    p: 'Get in touch',
+    h2: 'Contact.',
     form: {
       name: {
-        span: "Your Name",
+        span: 'Your Name',
         placeholder: "What's your name?",
       },
-      email: { span: "Your Email", placeholder: "What's your email?" },
+      email: { span: 'Your Email', placeholder: "What's your email?" },
       message: {
-        span: "Your Message",
-        placeholder: "What do you want to say?",
+        span: 'Your Message',
+        placeholder: 'What do you want to say?',
       },
     },
   },
   sections: {
     about: {
-      p: "Introduction",
-      h2: "Overview.",
-      content: `I'm a skilled software developer with experience in TypeScript and
-      JavaScript, and expertise in frameworks like React, Node.js, and
-      Three.js. I'm a quick learner and collaborate closely with clients to
-      create efficient, scalable, and user-friendly solutions that solve
-      real-world problems. Let's work together to bring your ideas to life!`,
+      p: 'Introduction',
+      h2: 'Overview.',
+      content: `I'm a Computer Science student at Kennesaw State University with a perfect 4.0 GPA, 
+      specializing in full-stack development and machine learning. Experienced with Python, Java, 
+      JavaScript, and various frameworks including React, Node.js, and Django. I combine strong 
+      theoretical knowledge with practical experience in software development and AI applications.`,
     },
     experience: {
-      p: "What I have done so far",
-      h2: "Work Experience.",
+      p: 'What I have done so far',
+      h2: 'Work Experience.',
     },
-    feedbacks: {
-      p: "What others say",
-      h2: "Testimonials.",
+    education: {
+      p: 'Educational Background',
+      h2: 'Education.',
     },
     works: {
-      p: "My work",
-      h2: "Projects.",
-      content: `Following projects showcases my skills and experience through
-    real-world examples of my work. Each project is briefly described with
-    links to code repositories and live demos in it. It reflects my
-    ability to solve complex problems, work with different technologies,
-    and manage projects effectively.`,
+      p: 'My work',
+      h2: 'Projects.',
+      content: `My portfolio includes a Movie Recommendation Platform using ML algorithms, 
+      a Fake News Detector leveraging NLP, and a Stock Management System. These projects 
+      demonstrate my ability to develop scalable solutions, implement machine learning models, 
+      and create efficient database systems. Each project showcases different aspects of my 
+      technical expertise and problem-solving capabilities.`,
     },
   },
 };

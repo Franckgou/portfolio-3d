@@ -1,11 +1,4 @@
-import type {
-  TNavLink,
-  TService,
-  TTechnology,
-  TExperience,
-  TTestimonial,
-  TProject,
-} from "../types";
+import type { TNavLink, TService, TTechnology, TExperience, TProject } from '../types';
 
 import {
   mobile,
@@ -13,262 +6,167 @@ import {
   creator,
   web,
   javascript,
-  typescript,
-  html,
-  css,
   reactjs,
-  redux,
-  tailwind,
   nodejs,
-  mongodb,
   git,
-  figma,
-  docker,
-  meta,
-  starbucks,
-  tesla,
-  shopify,
-  carrent,
-  jobit,
-  tripguide,
-  threejs,
-} from "../assets";
+  python,
+  java,
+  django,
+  postgresql,
+  mysql,
+  aws,
+  intelligentsia,
+  movieRecommender,
+  fakeNewsDetector,
+  stockManager,
+  pkf,
+} from '../assets';
 
 export const navLinks: TNavLink[] = [
   {
-    id: "about",
-    title: "About",
+    id: 'about',
+    title: 'About',
   },
   {
-    id: "work",
-    title: "Work",
+    id: 'work',
+    title: 'Work',
   },
   {
-    id: "contact",
-    title: "Contact",
+    id: 'contact',
+    title: 'Contact',
   },
 ];
 
 const services: TService[] = [
   {
-    title: "Web Developer",
+    title: 'Software Engineer',
     icon: web,
   },
   {
-    title: "React Native Developer",
+    title: 'Full Stack Developer',
     icon: mobile,
   },
   {
-    title: "Backend Developer",
+    title: 'Machine Learning Engineer',
     icon: backend,
   },
   {
-    title: "Content Creator",
+    title: 'Database Developer',
     icon: creator,
   },
 ];
 
 const technologies: TTechnology[] = [
   {
-    name: "HTML 5",
-    icon: html,
+    name: 'Python',
+    icon: python,
   },
   {
-    name: "CSS 3",
-    icon: css,
+    name: 'Java',
+    icon: java,
   },
   {
-    name: "JavaScript",
+    name: 'JavaScript',
     icon: javascript,
   },
   {
-    name: "TypeScript",
-    icon: typescript,
-  },
-  {
-    name: "React JS",
+    name: 'React',
     icon: reactjs,
   },
   {
-    name: "Redux Toolkit",
-    icon: redux,
-  },
-  {
-    name: "Tailwind CSS",
-    icon: tailwind,
-  },
-  {
-    name: "Node JS",
+    name: 'Node.js',
     icon: nodejs,
   },
   {
-    name: "MongoDB",
-    icon: mongodb,
+    name: 'Django',
+    icon: django,
   },
   {
-    name: "Three JS",
-    icon: threejs,
+    name: 'PostgreSQL',
+    icon: postgresql,
   },
   {
-    name: "git",
+    name: 'MySQL',
+    icon: mysql,
+  },
+  {
+    name: 'Git',
     icon: git,
   },
   {
-    name: "figma",
-    icon: figma,
-  },
-  {
-    name: "docker",
-    icon: docker,
+    name: 'AWS',
+    icon: aws,
   },
 ];
 
 const experiences: TExperience[] = [
   {
-    title: "React.js Developer",
-    companyName: "Starbucks",
-    icon: starbucks,
-    iconBg: "#383E56",
-    date: "March 2020 - April 2021",
+    title: 'Intern Software Engineer',
+    companyName: 'Intelligentsia SA',
+    icon: intelligentsia,
+    iconBg: '#383E56',
+    date: 'June 2023 - August 2023',
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      'Automated mailing system migration, reducing processing time by 80% using Python and Node.js',
+      'Developed server management tools, boosting efficiency by 25% for over 1,000 user accounts',
+      'Led deployment of scalable migration solutions for enterprise-level systems',
+      'Conducted technical presentations enhancing cross-team communication',
     ],
   },
   {
-    title: "React Native Developer",
-    companyName: "Tesla",
-    icon: tesla,
-    iconBg: "#E6DEDD",
-    date: "Jan 2021 - Feb 2022",
+    title: 'Frontend Developer',
+    companyName: 'PKF Alumni App',
+    icon: pkf, // Add PKF logo to assets
+    iconBg: '#E6DEDD',
+    date: 'December 2024 - March 2025',
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      'Designed and implemented alumni cards feature using React.js and modern frontend technologies',
+      'Collaborated with a team of experienced alumni developers to create a platform connecting students with graduates',
+      'Self-learned React.js through documentation and online resources while meeting project deadlines',
+      'Successfully balanced project responsibilities with academic commitments and part-time work through effective scheduling',
+      'Contributed to the development of https://pkfalumni.com/ through regular code reviews and pull requests',
     ],
-  },
-  {
-    title: "Web Developer",
-    companyName: "Shopify",
-    icon: shopify,
-    iconBg: "#383E56",
-    date: "Jan 2022 - Jan 2023",
-    points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
-    ],
-  },
-  {
-    title: "Full stack Developer",
-    companyName: "Meta",
-    icon: meta,
-    iconBg: "#E6DEDD",
-    date: "Jan 2023 - Present",
-    points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
-    ],
-  },
-];
-
-const testimonials: TTestimonial[] = [
-  {
-    testimonial:
-      "I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.",
-    name: "Sara Lee",
-    designation: "CFO",
-    company: "Acme Co",
-    image: "https://randomuser.me/api/portraits/women/4.jpg",
-  },
-  {
-    testimonial:
-      "I've never met a web developer who truly cares about their clients' success like Rick does.",
-    name: "Chris Brown",
-    designation: "COO",
-    company: "DEF Corp",
-    image: "https://randomuser.me/api/portraits/men/5.jpg",
-  },
-  {
-    testimonial:
-      "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
-    name: "Lisa Wang",
-    designation: "CTO",
-    company: "456 Enterprises",
-    image: "https://randomuser.me/api/portraits/women/6.jpg",
   },
 ];
 
 const projects: TProject[] = [
   {
-    name: "Car Rent",
+    name: 'Movie Recommendation Platform',
     description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+      'Advanced recommendation system achieving 90% accuracy using TF-IDF and cosine similarity. Features secure user authentication, responsive UI, and processes 10,000+ movie entries for personalized recommendations within 2 seconds.',
     tags: [
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "mongodb",
-        color: "green-text-gradient",
-      },
-      {
-        name: "tailwind",
-        color: "pink-text-gradient",
-      },
+      { name: 'react', color: 'blue-text-gradient' },
+      { name: 'nodejs', color: 'green-text-gradient' },
+      { name: 'postgresql', color: 'pink-text-gradient' },
+      { name: 'python', color: 'orange-text-gradient' },
     ],
-    image: carrent,
-    sourceCodeLink: "https://github.com/",
+    image: movieRecommender,
+    sourceCodeLink: 'https://github.com/Franckgou/content-recommendation',
   },
   {
-    name: "Job IT",
+    name: 'Fake News Detector',
     description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+      'Machine learning-based web application that detects fake news using Natural Language Processing. Features real-time analysis, support for text input and file upload, and visualization of prediction results.',
     tags: [
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "restapi",
-        color: "green-text-gradient",
-      },
-      {
-        name: "scss",
-        color: "pink-text-gradient",
-      },
+      { name: 'python', color: 'blue-text-gradient' },
+      { name: 'streamlit', color: 'green-text-gradient' },
+      { name: 'machine-learning', color: 'pink-text-gradient' },
     ],
-    image: jobit,
-    sourceCodeLink: "https://github.com/",
+    image: fakeNewsDetector,
+    sourceCodeLink: 'https://github.com/Franckgou/fake-news-detector',
   },
   {
-    name: "Trip Guide",
+    name: 'Stock Management System',
     description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+      'Comprehensive inventory tracking system that reduced discrepancies by 30% and improved restocking efficiency by 20%. Features automated stock updates and alerts for 50,000-item inventory with real-time dashboards.',
     tags: [
-      {
-        name: "nextjs",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "supabase",
-        color: "green-text-gradient",
-      },
-      {
-        name: "css",
-        color: "pink-text-gradient",
-      },
+      { name: 'java', color: 'blue-text-gradient' },
+      { name: 'mysql', color: 'green-text-gradient' },
+      { name: 'dashboard', color: 'pink-text-gradient' },
     ],
-    image: tripguide,
-    sourceCodeLink: "https://github.com/",
+    image: stockManager,
+    sourceCodeLink: 'https://github.com/Franckgou/',
   },
 ];
 
-export { services, technologies, experiences, testimonials, projects };
+export { services, technologies, experiences, projects };
