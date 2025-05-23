@@ -52,6 +52,31 @@ const ExperienceCard: React.FC<TExperience> = (experience) => {
           </li>
         ))}
       </ul>
+
+      {/* Add special highlight for migration achievement */}
+      {experience.companyName === "Intelligentsia SA" && (
+        <div className="mt-4 bg-black-200 rounded-lg p-4">
+          <h4 className="text-[16px] font-semibold text-[#915eff] mb-2">
+            🎯 Key Achievement: System Migration Project
+          </h4>
+          <p className="text-white-100 text-[13px] leading-[20px]">
+            Led the complete automation of a legacy mailing system migration, involving:
+          </p>
+          <ul className="mt-2 ml-4 list-disc text-[13px] text-secondary space-y-1">
+            <li>Analysis and mapping of existing system architecture</li>
+            <li>Development of automated migration scripts using Python and Node.js</li>
+            <li>Implementation of data validation and error handling mechanisms</li>
+            <li>Performance optimization resulting in 80% reduction in processing time</li>
+            <li>Successful deployment across enterprise infrastructure serving 1,000+ users</li>
+          </ul>
+          <div className="mt-3 bg-green-900/20 rounded p-2">
+            <p className="text-green-400 text-[12px] font-medium">
+              📊 Impact: Reduced manual processing from hours to minutes, improved system reliability by 95%, 
+              and established foundation for future scalability improvements.
+            </p>
+          </div>
+        </div>
+      )}
     </VerticalTimelineElement>
   );
 };
