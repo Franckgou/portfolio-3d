@@ -33,7 +33,7 @@ type TConfig = {
   sections: {
     about: Required<TSection>;
     experience: TSection;
-    education: TSection;
+    education: Required<TSection>;
     works: Required<TSection>;
   };
 };
@@ -77,8 +77,12 @@ export const config: TConfig = {
       h2: 'Work Experience.',
     },
     education: {
-      p: 'Educational Background',
+      p: 'Academic Excellence & Continuous Learning',
       h2: 'Education.',
+      content: `My educational foundation combines rigorous academic excellence at Kennesaw State University 
+      with specialized industry training through programs like CodePath's Technical Interview Prep. 
+      This dual approach ensures I maintain both theoretical depth and practical readiness for 
+      software engineering challenges in today's competitive landscape.`,
     },
     works: {
       p: 'My work',
