@@ -46,7 +46,7 @@ export const config: TConfig = {
   },
   hero: {
     name: 'Franck Tayo',
-    p: ['I develop Full Stack Applications,', 'ML Solutions and Software Systems'],
+    p: ['I develop Backend APIs,', 'Full Stack Applications & ML Solutions'],
   },
   contact: {
     p: 'Get in touch',
@@ -68,9 +68,10 @@ export const config: TConfig = {
       p: 'Introduction',
       h2: 'Overview.',
       content: `I'm a Computer Science student at Kennesaw State University with a perfect 4.0 GPA, 
-      specializing in full-stack development and machine learning. Experienced with Python, Java, 
-      JavaScript, and various frameworks including React, Node.js, and Django. I combine strong 
-      theoretical knowledge with practical experience in software development and AI applications.`,
+      specializing in backend development, API design, and full-stack applications. Currently working as a 
+      Backend Intern at PKF Alumni Network, where I architect REST APIs using FastAPI and PostgreSQL. 
+      My expertise spans Python, Java, JavaScript, and modern frameworks including React, Node.js, and Django. 
+      I excel at building scalable systems, implementing secure authentication, and creating efficient database solutions.`,
     },
     experience: {
       p: 'What I have done so far',
@@ -87,11 +88,11 @@ export const config: TConfig = {
     works: {
       p: 'My work',
       h2: 'Projects.',
-      content: `My portfolio includes a Movie Recommendation Platform using ML algorithms, 
-      a Fake News Detector leveraging NLP, and a Stock Management System. These projects 
-      demonstrate my ability to develop scalable solutions, implement machine learning models, 
-      and create efficient database systems. Each project showcases different aspects of my 
-      technical expertise and problem-solving capabilities.`,
+      content: `My portfolio showcases diverse technical expertise through projects like a comprehensive 
+      Restaurant POS Management System with FastAPI backend, a Movie Recommendation Platform using ML algorithms, 
+      a Fake News Detector leveraging NLP, and an Enterprise Stock Management System. These projects 
+      demonstrate my ability to architect scalable backend systems, implement machine learning models, 
+      design secure APIs, and create efficient database solutions across various technology stacks.`,
     },
   },
 };
