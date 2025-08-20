@@ -39,19 +39,19 @@ export const navLinks: TNavLink[] = [
 
 const services: TService[] = [
   {
-    title: 'Full Stack Developer',
+    title: 'Software Engineer',
     icon: web,
   },
   {
-    title: 'Backend Engineer',
-    icon: backend,
-  },
-  {
-    title: 'Machine Learning Engineer',
+    title: 'Full Stack Developer',
     icon: mobile,
   },
   {
-    title: 'API Developer',
+    title: 'Machine Learning Engineer',
+    icon: backend,
+  },
+  {
+    title: 'Database Developer',
     icon: creator,
   },
 ];
@@ -101,22 +101,6 @@ const technologies: TTechnology[] = [
 
 const experiences: TExperience[] = [
   {
-    title: 'Backend Intern',
-    companyName: 'PKF Alumni Network',
-    icon: pkf,
-    iconBg: '#E6DEDD',
-    date: 'December 2024 - Present',
-    points: [
-      'Transitioned from Frontend Developer to Backend Intern, expanding expertise in server-side development and API architecture',
-      'Architecting and developing robust REST APIs using FastAPI, SQLAlchemy, and PostgreSQL for the alumni networking platform',
-      'Implementing secure authentication systems with JWT tokens, password hashing, and role-based access control (RBAC)',
-      'Designing and optimizing database schemas, writing efficient queries, and managing data relationships for scalable applications',
-      'Building comprehensive CRUD operations for user management, event handling, and alumni connections with proper error handling',
-      'Collaborating with experienced alumni developers through code reviews, pair programming, and agile development practices',
-      'Contributing to https://pkfalumni.com/ backend infrastructure while maintaining high code quality and documentation standards'
-    ],
-  },
-  {
     title: 'Intern Software Engineer',
     companyName: 'Intelligentsia SA',
     icon: intelligentsia,
@@ -131,24 +115,24 @@ const experiences: TExperience[] = [
       'Implemented robust error handling and data validation mechanisms, achieving 95% system reliability improvement'
     ],
   },
+  {
+    title: 'Frontend Developer',
+    companyName: 'PKF Alumni Network',
+    icon: pkf,
+    iconBg: '#E6DEDD',
+    date: 'December 2024 - March 2025',
+    points: [
+      'Architected and implemented innovative alumni cards feature using React.js and modern frontend technologies, creating an intuitive user experience',
+      'Collaborated effectively with a diverse team of experienced alumni developers to build a comprehensive platform connecting students with industry graduates',
+      'Demonstrated exceptional self-learning capabilities by mastering React.js through documentation, online resources, and hands-on practice while meeting strict project deadlines',
+      'Successfully balanced multiple responsibilities including project development, academic commitments (4.0 GPA maintenance), and part-time work through strategic time management',
+      'Contributed significantly to the development of https://pkfalumni.com/ through regular code reviews, pull requests, and adherence to best practices',
+      'Implemented responsive design principles ensuring optimal user experience across all device types and screen sizes'
+    ],
+  },
 ];
 
 const projects: TProject[] = [
-  {
-    name: 'Restaurant POS Management System',
-    description:
-      'Comprehensive backend API for a modern Restaurant Point-of-Sale system built with FastAPI and PostgreSQL. Features secure employee authentication with JWT, role-based access control, complete CRUD operations for menu management, order processing, and table tracking. Includes automated database migrations with Alembic, comprehensive API documentation with Swagger, and scalable architecture designed to replace legacy JavaFX systems.',
-    tags: [
-      { name: 'fastapi', color: 'green-text-gradient' },
-      { name: 'postgresql', color: 'blue-text-gradient' },
-      { name: 'python', color: 'orange-text-gradient' },
-      { name: 'sqlalchemy', color: 'purple-text-gradient' },
-      { name: 'jwt-auth', color: 'cyan-text-gradient' },
-      { name: 'rest-api', color: 'pink-text-gradient' },
-    ],
-    image: stockManager, // We'll use this temporarily until you have a specific image
-    sourceCodeLink: 'https://github.com/Franckgou/restaurant-pos-system',
-  },
   {
     name: 'Movie Recommendation Platform',
     description:

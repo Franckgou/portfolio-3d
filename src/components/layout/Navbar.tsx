@@ -1,69 +1,121 @@
-/** @type {import('tailwindcss').Config} */
-module.exports = {
-  content: ["./src/**/*.{js,jsx,ts,tsx}"],
-  mode: "jit",
-  theme: {
-    extend: {
-      colors: {
-        // Modern light theme colors
-        primary: "#f8fafc", // Light background
-        secondary: "#64748b", // Muted text
-        tertiary: "#e2e8f0", // Light surface
-        
-        // Accent colors for the futuristic theme
-        'accent-primary': "#3b82f6", // Blue
-        'accent-secondary': "#8b5cf6", // Purple
-        'accent-tertiary': "#ec4899", // Pink
-        'accent-gradient': "#06b6d4", // Cyan
-        
-        // Neutral palette for better contrast
-        "neutral-50": "#f8fafc",
-        "neutral-100": "#f1f5f9", 
-        "neutral-200": "#e2e8f0",
-        "neutral-300": "#cbd5e1",
-        "neutral-400": "#94a3b8",
-        "neutral-500": "#64748b",
-        "neutral-600": "#475569",
-        "neutral-700": "#334155",
-        "neutral-800": "#1e293b",
-        "neutral-900": "#0f172a",
-        
-        // Legacy colors for compatibility
-        "black-100": "#e2e8f0",
-        "black-200": "#cbd5e1",
-        "white-100": "#f8fafc",
-      },
-      boxShadow: {
-        card: "0px 20px 40px -15px rgba(59, 130, 246, 0.15)",
-        "card-hover": "0px 30px 60px -15px rgba(59, 130, 246, 0.25)",
-        "accent-glow": "0 0 20px rgba(59, 130, 246, 0.3)",
-        "modern": "0 10px 30px -5px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)",
-        "glass": "0 8px 32px 0 rgba(31, 38, 135, 0.37)",
-      },
-      screens: {
-        xs: "450px",
-      },
-      backgroundImage: {
-        "hero-pattern": "linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%)",
-        "mesh-gradient": "linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(147, 51, 234, 0.1) 25%, rgba(236, 72, 153, 0.1) 50%, rgba(59, 130, 246, 0.1) 75%, rgba(16, 185, 129, 0.1) 100%)",
-        "card-gradient": "linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.7) 100%)",
-      },
-      fontFamily: {
-        'space-grotesk': ['Space Grotesk', 'sans-serif'],
-        'inter': ['Inter', 'sans-serif'],
-      },
-      animation: {
-        'float': 'float 6s ease-in-out infinite',
-        'pulse-slow': 'pulse-slow 4s ease-in-out infinite',
-        'mesh-move': 'meshMove 20s ease-in-out infinite',
-      },
-      backdropBlur: {
-        xs: '2px',
-      },
-      scale: {
-        '102': '1.02',
+import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+
+import { styles } from "../../constants/styles";
+import { navLinks } from "../../constants";
+import { logo, menu, close } from "../../assets";
+import { config } from "../../constants/config";
+
+const Navbar = () => {
+  const [active, setActive] = useState<string | null>();
+  const [toggle, setToggle] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.scrollY;
+      if (scrollTop > 100) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+        setActive("");
       }
-    },
-  },
-  plugins: [],
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    const navbarHighlighter = () => {
+      const sections = document.querySelectorAll("section[id]");
+
+      sections.forEach((current) => {
+        const sectionId = current.getAttribute("id");
+        // @ts-ignore
+        const sectionHeight = current.offsetHeight;
+        const sectionTop =
+          current.getBoundingClientRect().top - sectionHeight * 0.2;
+
+        if (sectionTop < 0 && sectionTop + sectionHeight > 0) {
+          setActive(sectionId);
+        }
+      });
+    };
+
+    window.addEventListener("scroll", navbarHighlighter);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("scroll", navbarHighlighter);
+    };
+  }, []);
+
+  return (
+    <nav
+      className={`${
+        styles.paddingX
+      } fixed top-0 z-20 flex w-full items-center py-5 ${
+        scrolled ? "bg-primary" : "bg-transparent"
+      }`}
+    >
+      <div className="mx-auto flex w-full max-w-7xl items-center justify-between">
+        <Link
+          to="/"
+          className="flex items-center gap-2"
+          onClick={() => {
+            window.scrollTo(0, 0);
+          }}
+        >
+          <img src={logo} alt="logo" className="h-9 w-9 object-contain" />
+          <p className="flex cursor-pointer text-[18px] font-bold text-white ">
+            {config.html.title}
+          </p>
+        </Link>
+
+        <ul className="hidden list-none flex-row gap-10 sm:flex">
+          {navLinks.map((nav) => (
+            <li
+              key={nav.id}
+              className={`${
+                active === nav.id ? "text-white" : "text-secondary"
+              } cursor-pointer text-[18px] font-medium hover:text-white`}
+            >
+              <a href={`#${nav.id}`}>{nav.title}</a>
+            </li>
+          ))}
+        </ul>
+
+        <div className="flex flex-1 items-center justify-end sm:hidden">
+          <img
+            src={toggle ? close : menu}
+            alt="menu"
+            className="h-[28px] w-[28px] object-contain"
+            onClick={() => setToggle(!toggle)}
+          />
+
+          <div
+            className={`${
+              !toggle ? "hidden" : "flex"
+            } black-gradient absolute right-0 top-20 z-10 mx-4 my-2 min-w-[140px] rounded-xl p-6`}
+          >
+            <ul className="flex flex-1 list-none flex-col items-start justify-end gap-4">
+              {navLinks.map((nav) => (
+                <li
+                  key={nav.id}
+                  className={`font-poppins cursor-pointer text-[16px] font-medium ${
+                    active === nav.id ? "text-white" : "text-secondary"
+                  }`}
+                  onClick={() => {
+                    setToggle(!toggle);
+                  }}
+                >
+                  <a href={`#${nav.id}`}>{nav.title}</a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+  );
 };
+
+export default Navbar;
