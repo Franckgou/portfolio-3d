@@ -1,5 +1,5 @@
 import type { TNavLink, TService, TTechnology, TExperience, TProject } from '../types';
-
+import restaurantPOS from '../assets/projects/content-recommendation.png';
 import {
   mobile,
   backend,
@@ -112,27 +112,53 @@ const experiences: TExperience[] = [
       'Developed comprehensive server management tools that boosted operational efficiency by 25% for enterprise infrastructure serving 1,000+ active user accounts',
       'Led cross-functional deployment of scalable migration solutions, ensuring zero downtime during critical system transitions',
       'Conducted technical presentations and knowledge transfer sessions, significantly enhancing cross-team communication and collaboration',
-      'Implemented robust error handling and data validation mechanisms, achieving 95% system reliability improvement'
+      'Implemented robust error handling and data validation mechanisms, achieving 95% system reliability improvement',
     ],
   },
   {
-    title: 'Frontend Developer',
+    title: 'Backend Developer',
     companyName: 'PKF Alumni Network',
     icon: pkf,
     iconBg: '#E6DEDD',
-    date: 'December 2024 - March 2025',
+    date: 'December 2024 - Present',
     points: [
-      'Architected and implemented innovative alumni cards feature using React.js and modern frontend technologies, creating an intuitive user experience',
-      'Collaborated effectively with a diverse team of experienced alumni developers to build a comprehensive platform connecting students with industry graduates',
-      'Demonstrated exceptional self-learning capabilities by mastering React.js through documentation, online resources, and hands-on practice while meeting strict project deadlines',
-      'Successfully balanced multiple responsibilities including project development, academic commitments (4.0 GPA maintenance), and part-time work through strategic time management',
-      'Contributed significantly to the development of https://pkfalumni.com/ through regular code reviews, pull requests, and adherence to best practices',
-      'Implemented responsive design principles ensuring optimal user experience across all device types and screen sizes'
+      'Led critical database migration from SQLite to PostgreSQL for enterprise-scale application serving 1,000+ users, implementing MVCC and advanced indexing strategies',
+      'Architected and developed comprehensive resume review service with AWS S3 integration, role-based access control, and RESTful API endpoints using FastAPI',
+      'Implemented robust database schema management with Alembic migrations, ensuring zero-downtime deployments and seamless version control',
+      'Optimized backend performance through PostgreSQL query optimization, connection pooling, and efficient data access patterns',
+      'Developed secure authentication systems with JWT tokens, proper error handling, and comprehensive input validation using Pydantic',
+      'Containerized applications with Docker and established CI/CD pipelines for reliable production deployments',
+      'Collaborated with cross-functional teams to deliver scalable backend solutions while maintaining high code quality standards',
     ],
   },
 ];
 
 const projects: TProject[] = [
+  {
+    name: 'Restaurant Point of Sale System',
+    description:
+      'Robust backend API for a modern Restaurant Point-of-Sale system built with FastAPI and PostgreSQL. Features secure authentication, role-based access control, employee management, and comprehensive API documentation. Designed to replace legacy systems with a scalable, high-performance architecture.',
+    tags: [
+      { name: 'python', color: 'blue-text-gradient' },
+      { name: 'fastapi', color: 'green-text-gradient' },
+      { name: 'postgresql', color: 'pink-text-gradient' },
+      { name: 'sqlalchemy', color: 'orange-text-gradient' },
+      { name: 'pydantic', color: 'blue-text-gradient' },
+      { name: 'jwt', color: 'green-text-gradient' },
+    ],
+    image: restaurantPOS,
+    sourceCodeLink: 'https://github.com/Franckgou/restaurant-pos-system',
+    features: [
+      'FastAPI high-performance web framework for building APIs',
+      'PostgreSQL relational database with SQLAlchemy ORM',
+      'JWT authentication with secure password hashing (Bcrypt)',
+      'Role-based access control (Manager, Waiter, Cook, Busboy)',
+      'Comprehensive employee management CRUD operations',
+      'Interactive API documentation with Swagger UI',
+      'Database migrations with Alembic',
+      'Pydantic data validation and settings management',
+    ],
+  },
   {
     name: 'Movie Recommendation Platform',
     description:

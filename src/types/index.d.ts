@@ -18,6 +18,18 @@ export type TTestimonial = {
   image: string;
 } & Required<Pick<TCommonProps, "name">>;
 
+export interface TProject {
+  // Your existing properties...
+  name: string;
+  description: string;
+  tags: { name: string; color: string }[];
+  image: string;
+  sourceCodeLink: string;
+  
+  // ADD these two new properties:
+  liveDemo?: string;
+  features?: string[];
+}
 export type TProject = {
   description: string;
   tags: {
