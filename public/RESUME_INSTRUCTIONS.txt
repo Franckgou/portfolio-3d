@@ -1,0 +1,23 @@
+==========================================
+RESUME FILE INSTRUCTIONS
+==========================================
+
+To enable the resume download feature on your portfolio:
+
+1. Place your resume PDF file in this 'public' folder
+2. Name it exactly: resume.pdf
+3. The file will be accessible at: /resume.pdf
+
+EXAMPLE:
+/home/user/portfolio-3d/public/resume.pdf
+
+Once you add your resume.pdf file here, visitors will be able to:
+- Download it from the Hero section (homepage)
+- Download it from the Navbar (visible on all pages)
+- Download it from mobile menu
+
+The download will be named: "Franck_Tayo_Resume.pdf"
+
+To update your resume, simply replace the resume.pdf file in this folder.
+
+==========================================

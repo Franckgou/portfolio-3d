@@ -57,6 +57,19 @@ const Hero = () => {
               View My Work
             </motion.button>
 
+            <motion.a
+              href="/resume.pdf"
+              download="Franck_Tayo_Resume.pdf"
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+              className="px-8 py-3.5 bg-white hover:bg-gray-50 border border-gray-200 rounded-xl text-gray-700 font-medium shadow-sm hover:shadow-md transition-all duration-200 flex items-center gap-2"
+            >
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+              </svg>
+              Download Resume
+            </motion.a>
+
             <motion.button
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
@@ -65,6 +78,31 @@ const Hero = () => {
             >
               Get In Touch
             </motion.button>
+          </motion.div>
+
+          {/* Quick Highlights */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.6, ease: [0.16, 1, 0.3, 1] }}
+            className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl"
+          >
+            <div className="bg-white/60 backdrop-blur-sm rounded-2xl p-4 border border-gray-200/50 hover:shadow-md transition-shadow duration-200">
+              <div className="text-2xl font-bold text-accent mb-1">4.0</div>
+              <div className="text-sm text-gray-600">GPA</div>
+            </div>
+            <div className="bg-white/60 backdrop-blur-sm rounded-2xl p-4 border border-gray-200/50 hover:shadow-md transition-shadow duration-200">
+              <div className="text-2xl font-bold text-accent mb-1">5+</div>
+              <div className="text-sm text-gray-600">Projects</div>
+            </div>
+            <div className="bg-white/60 backdrop-blur-sm rounded-2xl p-4 border border-gray-200/50 hover:shadow-md transition-shadow duration-200">
+              <div className="text-2xl font-bold text-accent mb-1">2</div>
+              <div className="text-sm text-gray-600">Internships</div>
+            </div>
+            <div className="bg-white/60 backdrop-blur-sm rounded-2xl p-4 border border-gray-200/50 hover:shadow-md transition-shadow duration-200">
+              <div className="text-2xl font-bold text-accent mb-1">10+</div>
+              <div className="text-sm text-gray-600">Technologies</div>
+            </div>
           </motion.div>
         </motion.div>
       </div>
