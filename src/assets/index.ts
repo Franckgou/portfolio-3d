@@ -20,7 +20,8 @@ import mysql from './tech/mysql.svg';
 
 // Company icons
 import intelligentsia from './company/Intelligentsia.jpg';
-import pkf from './company/pkf.png'; // Make sure the filename matches exactly
+import pkf from './company/pkf.png';
+import adobe from './company/adobe.png'; // Adobe Student Ambassador logo
 
 // Project images
 import movieRecommender from './projects/content-recommendation.png';
@@ -47,7 +48,8 @@ export {
   mysql,
   aws,
   intelligentsia,
-  pkf, // Make sure this is exported
+  pkf,
+  adobe,
   movieRecommender,
   fakeNewsDetector,
   stockManager,

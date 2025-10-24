@@ -20,6 +20,7 @@ import {
   fakeNewsDetector,
   stockManager,
   pkf,
+  adobe,
 } from '../assets';
 
 export const navLinks: TNavLink[] = [
@@ -118,7 +119,7 @@ const experiences: TExperience[] = [
   {
     title: 'Adobe Student Ambassador',
     companyName: 'Adobe & Kennesaw State University',
-    icon: intelligentsia, // Will need to add Adobe icon later
+    icon: adobe,
     iconBg: '#FF0000',
     date: 'August 2024 - Present',
     points: [
