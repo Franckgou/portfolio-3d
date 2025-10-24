@@ -78,13 +78,13 @@ const Contact = () => {
     <div className={`flex flex-col-reverse gap-10 overflow-hidden xl:mt-12 xl:flex-row`}>
       <motion.div
         variants={slideIn('left', 'tween', 0.2, 1)}
-        className="bg-black-100 flex-[0.75] rounded-2xl p-8"
+        className="modern-card flex-[0.75] p-10"
       >
         <Header useMotion={false} {...config.contact} />
 
         {/* Add contact details section */}
-        <div className="mt-4 mb-8 text-white">
-          <div className="flex flex-col gap-2">
+        <div className="mt-6 mb-8 text-gray-600">
+          <div className="flex flex-col gap-3">
             <p className="flex items-center">
               <span className="mr-2">📧</span>
               Email: tayofranck07@gmail.com
@@ -102,7 +102,7 @@ const Contact = () => {
                 href="https://github.com/Franckgou"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[#915eff] hover:text-white transition-colors"
+                className="text-accent hover:text-accent-hover transition-colors font-medium"
               >
                 GitHub
               </a>
@@ -110,7 +110,7 @@ const Contact = () => {
                 href="https://www.linkedin.com/in/franck-cabrel-tayo-gouonpegne-407a44204/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[#915eff] hover:text-white transition-colors"
+                className="text-accent hover:text-accent-hover transition-colors font-medium"
               >
                 LinkedIn
               </a>
@@ -122,7 +122,7 @@ const Contact = () => {
           // @ts-expect-error
           ref={formRef}
           onSubmit={handleSubmit}
-          className="mt-12 flex flex-col gap-8"
+          className="mt-8 flex flex-col gap-6"
         >
           {Object.keys(config.contact.form).map(input => {
             const { span, placeholder } =
@@ -131,14 +131,14 @@ const Contact = () => {
 
             return (
               <label key={input} className="flex flex-col">
-                <span className="mb-4 font-medium text-white">{span}</span>
+                <span className="mb-2 font-medium text-gray-700">{span}</span>
                 <Component
                   type={input === 'email' ? 'email' : 'text'}
                   name={input}
                   value={form[`${input}`]}
                   onChange={handleChange}
                   placeholder={placeholder}
-                  className="bg-tertiary placeholder:text-secondary rounded-lg border-none px-6 py-4 font-medium text-white outline-none"
+                  className="bg-gray-50 placeholder:text-gray-400 rounded-xl border border-gray-200 px-5 py-3.5 font-medium text-gray-700 outline-none focus:border-accent focus:ring-2 focus:ring-accent/20 transition-all"
                   {...(input === 'message' && { rows: 7 })}
                 />
               </label>
@@ -146,16 +146,17 @@ const Contact = () => {
           })}
           <button
             type="submit"
-            className="bg-tertiary shadow-primary w-fit rounded-xl px-8 py-3 font-bold text-white shadow-md outline-none"
+            className="bg-accent hover:bg-accent-hover w-fit rounded-xl px-8 py-3.5 font-medium text-white shadow-sm hover:shadow-md transition-all outline-none disabled:opacity-50 disabled:cursor-not-allowed"
+            disabled={loading}
           >
-            {loading ? 'Sending...' : 'Send'}
+            {loading ? 'Sending...' : 'Send Message'}
           </button>
         </form>
       </motion.div>
 
       <motion.div
         variants={slideIn('right', 'tween', 0.2, 1)}
-        className="h-[350px] md:h-[550px] xl:h-auto xl:flex-1"
+        className="h-[350px] md:h-[550px] xl:h-auto xl:flex-1 hidden xl:block"
       >
         <EarthCanvas />
       </motion.div>

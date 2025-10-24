@@ -29,28 +29,28 @@ const EducationCard: React.FC<EducationCardProps> = ({
   icon,
 }) => (
   <motion.div
-    variants={fadeIn('up', 'spring', index * 0.3, 0.75)}
-    className="bg-black-200 w-full rounded-3xl p-8 xs:w-[400px] lg:w-[450px]"
+    variants={fadeIn('up', 'spring', index * 0.2, 0.5)}
+    className="modern-card w-full p-8 xs:w-[400px] lg:w-[450px]"
   >
     <div className="flex items-center mb-4">
       {icon && <span className="text-3xl mr-3">{icon}</span>}
       <div>
-        <h3 className="text-[22px] font-bold text-white">{institution}</h3>
-        <p className="text-secondary text-[14px] opacity-80">{period}</p>
+        <h3 className="text-[22px] font-bold text-gray-700">{institution}</h3>
+        <p className="text-gray-500 text-[14px]">{period}</p>
       </div>
     </div>
 
-    <p className="text-[18px] font-semibold text-[#915eff] mb-3">{program}</p>
+    <p className="text-[18px] font-semibold text-accent mb-3">{program}</p>
 
     {gpa && (
-      <div className="bg-green-900/20 rounded-lg p-3 mb-4">
-        <p className="text-green-400 font-semibold text-[16px]">🏆 {gpa}</p>
+      <div className="bg-green-50 rounded-lg p-3 mb-4 border border-green-200">
+        <p className="text-green-700 font-semibold text-[16px]">🏆 {gpa}</p>
       </div>
     )}
 
     <div className="space-y-4">
       {details.map((detail, idx) => (
-        <p key={idx} className="text-secondary text-[15px] leading-[24px]">
+        <p key={idx} className="text-gray-600 text-[15px] leading-[26px]">
           {detail}
         </p>
       ))}
@@ -58,8 +58,8 @@ const EducationCard: React.FC<EducationCardProps> = ({
 
     {achievements && achievements.length > 0 && (
       <div className="mt-4">
-        <h4 className="text-[16px] font-semibold text-white mb-2">🎯 Key Achievements:</h4>
-        <ul className="text-secondary text-[14px] list-disc pl-5 space-y-1">
+        <h4 className="text-[16px] font-semibold text-gray-700 mb-2">🎯 Key Achievements:</h4>
+        <ul className="text-gray-600 text-[14px] list-disc pl-5 space-y-1">
           {achievements.map((achievement, idx) => (
             <li key={idx}>{achievement}</li>
           ))}
@@ -69,12 +69,12 @@ const EducationCard: React.FC<EducationCardProps> = ({
 
     {skills && skills.length > 0 && (
       <div className="mt-4">
-        <h4 className="text-[16px] font-semibold text-white mb-2">💡 Skills Developed:</h4>
+        <h4 className="text-[16px] font-semibold text-gray-700 mb-2">💡 Skills Developed:</h4>
         <div className="flex flex-wrap gap-2">
           {skills.map((skill, idx) => (
             <span
               key={idx}
-              className="bg-tertiary text-secondary px-3 py-1 rounded-full text-[12px] font-medium"
+              className="bg-gray-100 text-gray-600 px-3 py-1 rounded-full text-[12px] font-medium"
             >
               {skill}
             </span>
@@ -144,13 +144,13 @@ const Education = () => {
   ];
 
   return (
-    <div className="mt-12 rounded-[20px] bg-black-100">
-      <div className={`${styles.padding} rounded-2xl bg-tertiary min-h-[300px]`}>
+    <div className="mt-12 rounded-2xl bg-secondary">
+      <div className={`${styles.padding} rounded-2xl bg-gradient-subtle min-h-[300px]`}>
         <Header useMotion={true} {...config.sections.education} />
 
         <motion.p
           variants={fadeIn('', '', 0.1, 1)}
-          className="text-secondary mt-4 max-w-3xl text-[17px] leading-[30px]"
+          className="text-gray-600 mt-4 max-w-3xl text-[17px] leading-[32px]"
         >
           My educational journey combines rigorous academic excellence with practical,
           industry-focused training. From maintaining a perfect GPA at university to completing
@@ -171,12 +171,12 @@ const Education = () => {
       <div className={`${styles.paddingX} pb-14`}>
         <motion.div
           variants={fadeIn('up', 'spring', 0.5, 0.75)}
-          className="bg-tertiary rounded-2xl p-6"
+          className="modern-card p-8"
         >
-          <h3 className="text-white text-[20px] font-bold mb-4">
+          <h3 className="text-gray-700 text-[20px] font-bold mb-4">
             🚀 Continuous Learning Philosophy
           </h3>
-          <p className="text-secondary text-[15px] leading-[24px] mb-4">
+          <p className="text-gray-600 text-[15px] leading-[26px] mb-4">
             Beyond formal education, I believe in continuous skill development through hands-on
             projects, industry-standard practices, and staying current with emerging technologies.
             My approach combines academic rigor with practical application, ensuring I'm prepared
@@ -184,21 +184,21 @@ const Education = () => {
           </p>
 
           <div className="grid md:grid-cols-2 gap-4 mt-6">
-            <div className="bg-black-100 rounded-xl p-4">
-              <h4 className="text-[16px] font-semibold text-[#915eff] mb-2">
+            <div className="bg-gray-50 rounded-xl p-5">
+              <h4 className="text-[16px] font-semibold text-accent mb-2">
                 📚 Academic Excellence
               </h4>
-              <p className="text-secondary text-[14px]">
+              <p className="text-gray-600 text-[14px] leading-[22px]">
                 Maintaining a perfect 4.0 GPA while engaging in challenging coursework across
                 multiple CS disciplines
               </p>
             </div>
 
-            <div className="bg-black-100 rounded-xl p-4">
-              <h4 className="text-[16px] font-semibold text-[#915eff] mb-2">
+            <div className="bg-gray-50 rounded-xl p-5">
+              <h4 className="text-[16px] font-semibold text-accent mb-2">
                 🔧 Practical Application
               </h4>
-              <p className="text-secondary text-[14px]">
+              <p className="text-gray-600 text-[14px] leading-[22px]">
                 Applying theoretical knowledge through internships, personal projects, and
                 collaborative development work
               </p>
