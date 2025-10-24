@@ -262,60 +262,50 @@ const ProjectCard: React.FC<{ index: number } & TProject> = ({
 
   return (
     <motion.div
-      variants={fadeIn('up', 'spring', index * 0.5, 0.75)}
+      variants={fadeIn('up', 'spring', index * 0.2, 0.4)}
       className="w-full max-w-[400px]"
     >
-      <Tilt
-        glareEnable
-        tiltEnable
-        tiltMaxAngleX={15}
-        tiltMaxAngleY={15}
-        glareColor="#ffffff"
-        glareBorderRadius="20px"
-        glareMaxOpacity={0.1}
-        className="w-full"
+      <motion.div
+        className="modern-card overflow-hidden h-full flex flex-col"
+        whileHover={{ y: -4 }}
+        transition={{ type: 'spring', stiffness: 300 }}
+        animate={{
+          minHeight: isExpanded ? '800px' : '500px',
+        }}
       >
-        <motion.div
-          className="relative w-full bg-gradient-to-br from-[#1a1a2e] via-[#16213e] to-[#0f3460] p-[1px] rounded-[20px] shadow-2xl hover:shadow-[0_20px_50px_rgba(8,_112,_184,_0.7)] transition-all duration-500"
-          whileHover={{ scale: 1.02, y: -5 }}
-          transition={{ type: 'spring', stiffness: 300 }}
-          animate={{
-            minHeight: isExpanded ? '800px' : '500px',
-          }}
-        >
-          <div className="bg-gradient-to-br from-[rgba(255,255,255,0.1)] to-[rgba(255,255,255,0.02)] backdrop-blur-lg border border-[rgba(255,255,255,0.1)] rounded-[20px] p-5 h-full flex flex-col">
+        <div className="p-6 h-full flex flex-col">
             {/* Image and basic info */}
-            <div className="relative w-full h-[200px] rounded-[16px] overflow-hidden group mb-5">
+            <div className="relative w-full h-[200px] rounded-xl overflow-hidden group mb-5">
               <img
                 src={image}
                 alt={name}
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
               />
 
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+              <div className="absolute inset-0 bg-gradient-to-t from-gray-900/90 via-gray-900/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
                 <div className="flex gap-3 w-full">
                   <motion.a
-                    whileHover={{ scale: 1.1 }}
-                    whileTap={{ scale: 0.9 }}
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
                     href={sourceCodeLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex-1 bg-white/20 backdrop-blur-sm rounded-full py-2 px-4 flex items-center justify-center cursor-pointer border border-white/30 text-white text-sm font-medium"
+                    className="flex-1 bg-white/90 backdrop-blur-sm rounded-lg py-2 px-4 flex items-center justify-center cursor-pointer text-gray-700 text-sm font-medium hover:bg-white transition-colors"
                   >
                     <img src={github} alt="github" className="w-4 h-4 mr-2" />
-                    View Code
+                    Code
                   </motion.a>
 
                   {(liveDemo || projectData?.liveDemo) && (
                     <motion.a
-                      whileHover={{ scale: 1.1 }}
-                      whileTap={{ scale: 0.9 }}
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
                       href={liveDemo || projectData?.liveDemo}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex-1 bg-gradient-to-r from-[#915eff] to-[#4c1d95] rounded-full py-2 px-4 flex items-center justify-center cursor-pointer text-white text-sm font-medium"
+                      className="flex-1 bg-accent hover:bg-accent-hover rounded-lg py-2 px-4 flex items-center justify-center cursor-pointer text-white text-sm font-medium transition-colors"
                     >
-                      🚀 Live Demo
+                      Live Demo
                     </motion.a>
                   )}
                 </div>
@@ -323,7 +313,7 @@ const ProjectCard: React.FC<{ index: number } & TProject> = ({
             </div>
 
             {/* Project Title and Description */}
-            <h3 className="text-white font-bold text-[20px] mb-3 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+            <h3 className="text-gray-700 font-bold text-[20px] mb-3">
               {name}
             </h3>
 
@@ -332,23 +322,23 @@ const ProjectCard: React.FC<{ index: number } & TProject> = ({
               {tags.map(tag => (
                 <span
                   key={`${name}-${tag.name}`}
-                  className={`text-[11px] font-medium px-2 py-1 rounded-full backdrop-blur-sm border border-white/20 ${tag.color}`}
+                  className="text-[11px] font-medium px-3 py-1 rounded-full bg-gray-100 text-gray-600"
                 >
-                  #{tag.name}
+                  {tag.name}
                 </span>
               ))}
             </div>
 
             {/* Tab Navigation */}
-            <div className="flex gap-1 mb-4 bg-black/20 p-1 rounded-lg">
+            <div className="flex gap-1 mb-4 bg-gray-100 p-1 rounded-lg">
               {tabs.map(tab => (
                 <button
                   key={tab.id}
                   onClick={() => setActiveTab(tab.id as any)}
-                  className={`flex-1 py-2 px-2 rounded-md text-xs font-medium transition-all duration-300 flex items-center justify-center gap-1 ${
+                  className={`flex-1 py-2 px-2 rounded-md text-xs font-medium transition-all duration-200 flex items-center justify-center gap-1 ${
                     activeTab === tab.id
-                      ? 'bg-gradient-to-r from-[#915eff] to-[#4c1d95] text-white shadow-lg'
-                      : 'text-gray-300 hover:text-white hover:bg-white/10'
+                      ? 'bg-accent text-white shadow-sm'
+                      : 'text-gray-600 hover:text-gray-700 hover:bg-gray-50'
                   }`}
                 >
                   <span className="text-sm">{tab.icon}</span>
@@ -370,21 +360,21 @@ const ProjectCard: React.FC<{ index: number } & TProject> = ({
                 >
                   {activeTab === 'overview' && projectData && (
                     <div className="space-y-3">
-                      <p className="text-secondary text-[13px] leading-[18px]">
+                      <p className="text-gray-600 text-[13px] leading-[20px]">
                         {projectData.overview}
                       </p>
                       {projectData.performance.length > 0 && (
                         <div>
-                          <h4 className="text-white font-semibold text-[14px] mb-2 flex items-center gap-2">
+                          <h4 className="text-gray-700 font-semibold text-[14px] mb-2 flex items-center gap-2">
                             📈 Performance Metrics
                           </h4>
                           <ul className="space-y-1">
                             {projectData.performance.slice(0, 3).map((metric, idx) => (
                               <li
                                 key={idx}
-                                className="text-secondary text-[12px] flex items-start gap-2"
+                                className="text-gray-600 text-[12px] flex items-start gap-2"
                               >
-                                <span className="text-[#915eff] mt-1">•</span>
+                                <span className="text-accent mt-1">•</span>
                                 {metric}
                               </li>
                             ))}
@@ -396,7 +386,7 @@ const ProjectCard: React.FC<{ index: number } & TProject> = ({
 
                   {activeTab === 'features' && projectData && (
                     <div>
-                      <h4 className="text-white font-semibold text-[14px] mb-3 flex items-center gap-2">
+                      <h4 className="text-gray-700 font-semibold text-[14px] mb-3 flex items-center gap-2">
                         ✨ Key Features
                       </h4>
                       <ul className="space-y-2 max-h-[300px] overflow-y-auto">
@@ -405,10 +395,10 @@ const ProjectCard: React.FC<{ index: number } & TProject> = ({
                             key={idx}
                             initial={{ opacity: 0, x: -10 }}
                             animate={{ opacity: 1, x: 0 }}
-                            transition={{ delay: idx * 0.1 }}
-                            className="text-secondary text-[12px] flex items-start gap-2 p-2 bg-black/20 rounded-lg"
+                            transition={{ delay: idx * 0.05 }}
+                            className="text-gray-600 text-[12px] flex items-start gap-2 p-2 bg-gray-50 rounded-lg"
                           >
-                            <span className="text-[#915eff] mt-1 flex-shrink-0">•</span>
+                            <span className="text-accent mt-1 flex-shrink-0">•</span>
                             {feature}
                           </motion.li>
                         ))}
@@ -419,16 +409,16 @@ const ProjectCard: React.FC<{ index: number } & TProject> = ({
                   {activeTab === 'tech' && projectData && (
                     <div className="space-y-4">
                       <div>
-                        <h4 className="text-white font-semibold text-[14px] mb-3 flex items-center gap-2">
+                        <h4 className="text-gray-700 font-semibold text-[14px] mb-3 flex items-center gap-2">
                           🏗️ Architecture
                         </h4>
                         <ul className="space-y-1">
                           {projectData.architecture.map((item, idx) => (
                             <li
                               key={idx}
-                              className="text-secondary text-[12px] flex items-start gap-2"
+                              className="text-gray-600 text-[12px] flex items-start gap-2"
                             >
-                              <span className="text-[#4facfe] mt-1">▸</span>
+                              <span className="text-accent mt-1">▸</span>
                               {item}
                             </li>
                           ))}
@@ -436,16 +426,16 @@ const ProjectCard: React.FC<{ index: number } & TProject> = ({
                       </div>
 
                       <div>
-                        <h4 className="text-white font-semibold text-[14px] mb-2 flex items-center gap-2">
+                        <h4 className="text-gray-700 font-semibold text-[14px] mb-2 flex items-center gap-2">
                           💡 Technical Highlights
                         </h4>
                         <ul className="space-y-1">
                           {projectData.technicalHighlights.slice(0, 4).map((highlight, idx) => (
                             <li
                               key={idx}
-                              className="text-secondary text-[12px] flex items-start gap-2"
+                              className="text-gray-600 text-[12px] flex items-start gap-2"
                             >
-                              <span className="text-[#f093fb] mt-1">◆</span>
+                              <span className="text-accent mt-1">◆</span>
                               {highlight}
                             </li>
                           ))}
@@ -457,19 +447,19 @@ const ProjectCard: React.FC<{ index: number } & TProject> = ({
                   {activeTab === 'setup' && projectData && (
                     <div className="space-y-4">
                       <div>
-                        <h4 className="text-white font-semibold text-[14px] mb-3 flex items-center gap-2">
+                        <h4 className="text-gray-700 font-semibold text-[14px] mb-3 flex items-center gap-2">
                           📦 Installation
                         </h4>
                         <ol className="space-y-2">
                           {projectData.installation.map((step, idx) => (
                             <li
                               key={idx}
-                              className="text-secondary text-[12px] flex items-start gap-2"
+                              className="text-gray-600 text-[12px] flex items-start gap-2"
                             >
-                              <span className="text-[#915eff] bg-[#915eff]/20 rounded-full w-5 h-5 flex items-center justify-center text-[10px] font-bold mt-0.5 flex-shrink-0">
+                              <span className="text-white bg-accent rounded-full w-5 h-5 flex items-center justify-center text-[10px] font-bold mt-0.5 flex-shrink-0">
                                 {idx + 1}
                               </span>
-                              <code className="bg-black/30 px-2 py-1 rounded text-[11px] break-all">
+                              <code className="bg-gray-100 px-2 py-1 rounded text-[11px] break-all text-gray-700">
                                 {step}
                               </code>
                             </li>
@@ -478,16 +468,16 @@ const ProjectCard: React.FC<{ index: number } & TProject> = ({
                       </div>
 
                       <div>
-                        <h4 className="text-white font-semibold text-[14px] mb-2 flex items-center gap-2">
+                        <h4 className="text-gray-700 font-semibold text-[14px] mb-2 flex items-center gap-2">
                           🎯 Quick Start
                         </h4>
                         <ul className="space-y-1">
                           {projectData.usage.slice(0, 3).map((step, idx) => (
                             <li
                               key={idx}
-                              className="text-secondary text-[12px] flex items-start gap-2"
+                              className="text-gray-600 text-[12px] flex items-start gap-2"
                             >
-                              <span className="text-[#4ade80] mt-1">→</span>
+                              <span className="text-accent mt-1">→</span>
                               {step}
                             </li>
                           ))}
@@ -502,15 +492,14 @@ const ProjectCard: React.FC<{ index: number } & TProject> = ({
             {/* Expand/Collapse Button */}
             <motion.button
               onClick={() => setIsExpanded(!isExpanded)}
-              className="mt-4 w-full py-2 bg-gradient-to-r from-[#915eff]/20 to-[#4c1d95]/20 backdrop-blur-sm border border-[#915eff]/30 rounded-lg text-[#915eff] text-sm font-medium hover:from-[#915eff]/30 hover:to-[#4c1d95]/30 transition-all duration-300"
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
+              className="mt-4 w-full py-2.5 bg-gray-100 hover:bg-gray-200 rounded-lg text-gray-700 text-sm font-medium transition-all duration-200"
+              whileHover={{ scale: 1.01 }}
+              whileTap={{ scale: 0.99 }}
             >
               {isExpanded ? 'Show Less ↑' : 'Show More ↓'}
             </motion.button>
           </div>
         </motion.div>
-      </Tilt>
     </motion.div>
   );
 };
@@ -523,7 +512,7 @@ const Works = () => {
       <div className="flex w-full">
         <motion.p
           variants={fadeIn('', '', 0.1, 1)}
-          className="text-secondary mt-3 max-w-3xl text-[17px] leading-[30px]"
+          className="text-gray-600 mt-3 max-w-3xl text-[17px] leading-[32px]"
         >
           Each project represents a comprehensive solution with detailed documentation, installation
           guides, and real-world impact metrics. Click through the tabs to explore features,
