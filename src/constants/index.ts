@@ -135,6 +135,31 @@ const experiences: TExperience[] = [
 
 const projects: TProject[] = [
   {
+    name: 'CacheGrid',
+    description:
+      'High-performance distributed in-memory cache system built with Python and FastAPI. Achieves 50,000+ operations/second with sub-10ms P99 latency. Features multiple eviction policies (LRU, LFU, TTL), comprehensive monitoring, Docker support, and seamless horizontal scaling. Designed for production workloads with 99.9% availability.',
+    tags: [
+      { name: 'python', color: 'blue-text-gradient' },
+      { name: 'fastapi', color: 'green-text-gradient' },
+      { name: 'docker', color: 'pink-text-gradient' },
+      { name: 'redis', color: 'orange-text-gradient' },
+      { name: 'asyncio', color: 'blue-text-gradient' },
+      { name: 'caching', color: 'green-text-gradient' },
+    ],
+    image: restaurantPOS, // Temporary - will update with proper image
+    sourceCodeLink: 'https://github.com/Franckgou/cachegrid',
+    features: [
+      '50,000+ operations/second throughput with sub-10ms P99 latency',
+      'Multiple eviction policies: LRU, LFU, TTL-based, size-based',
+      'Comprehensive metrics and health monitoring',
+      'Docker and Docker Compose support for easy deployment',
+      'Python async client SDK with automatic failover',
+      'Batch operations for improved performance',
+      'RESTful API with interactive Swagger documentation',
+      'Memory management with configurable limits',
+    ],
+  },
+  {
     name: 'Restaurant Point of Sale System',
     description:
       'Robust backend API for a modern Restaurant Point-of-Sale system built with FastAPI and PostgreSQL. Features secure authentication, role-based access control, employee management, and comprehensive API documentation. Designed to replace legacy systems with a scalable, high-performance architecture.',

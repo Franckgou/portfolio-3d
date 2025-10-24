@@ -24,6 +24,59 @@ const enhancedProjectData: Record<
     liveDemo?: string;
   }
 > = {
+  'CacheGrid': {
+    overview:
+      'CacheGrid is a high-performance, distributed in-memory cache system built with Python and FastAPI. Designed for production workloads, it offers advanced features like multiple eviction policies, TTL support, comprehensive monitoring, and seamless horizontal scaling. Achieves 50,000+ operations per second with sub-10ms P99 latency.',
+    keyFeatures: [
+      'Multiple eviction policies: LRU, LFU, TTL-based, and size-based',
+      'TTL (Time-To-Live) management with automatic expiration',
+      'Batch operations for multi-key GET/SET with improved performance',
+      'Comprehensive metrics export and performance monitoring',
+      'Python async client SDK with automatic failover support',
+      'Docker and Docker Compose support for easy deployment',
+      'Health checks for container orchestration',
+      'Interactive API documentation with Swagger UI',
+    ],
+    technicalHighlights: [
+      'FastAPI framework for high-performance async API',
+      'Advanced memory management with configurable limits',
+      'Thread-safe atomic operations with async support',
+      'Background TTL cleanup tasks for efficient memory usage',
+      'Environment-based configuration for flexibility',
+      'Built-in load testing endpoints for performance validation',
+      'RESTful API design with comprehensive error handling',
+    ],
+    installation: [
+      'Using Docker: docker run -d --name cachegrid -p 8080:8080 cachegrid:latest',
+      'Or clone: git clone https://github.com/Franckgou/cachegrid.git',
+      'Install dependencies: pip install -r requirements.txt',
+      'Start server: cd src && python -m uvicorn cachegrid.api.server:app --host 0.0.0.0 --port 8080',
+      'Test: curl http://localhost:8080/health',
+      'Access API docs at http://localhost:8080/docs',
+    ],
+    usage: [
+      'Set a value: curl -X PUT "http://localhost:8080/cache/key" -d "value"',
+      'Get a value: curl "http://localhost:8080/cache/key"',
+      'Set with TTL: curl -X PUT "http://localhost:8080/cache/key?ttl=3600"',
+      'Batch operations: Use /cache/batch/set and /cache/batch/get endpoints',
+      'Monitor performance: curl "http://localhost:8080/stats"',
+    ],
+    architecture: [
+      'Cache Engine: High-performance in-memory storage with configurable eviction',
+      'REST API: FastAPI-based HTTP interface for all operations',
+      'Health Monitor: Tracks performance metrics and system health',
+      'Background Tasks: TTL cleanup and maintenance operations',
+      'Client SDK: Async Python client with failover capabilities',
+      'Deployment: Docker containers with health checks',
+    ],
+    performance: [
+      'Throughput: 50,000+ operations/second (single node)',
+      'Latency: Sub-10ms P99 latency for typical workloads',
+      'Memory Efficiency: ~200 bytes overhead per cache item',
+      'Reliability: 99.9% availability with proper setup',
+      'Scalability: Horizontal scaling support (planned v2.0)',
+    ],
+  },
   'Restaurant Point of Sale System': {
     overview:
       'A comprehensive full-stack POS system built for modern restaurants, featuring real-time order management, inventory tracking, and secure payment processing. This system streamlines restaurant operations by integrating all essential components from order taking to payment processing.',
