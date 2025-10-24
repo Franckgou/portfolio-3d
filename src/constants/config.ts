@@ -46,7 +46,7 @@ export const config: TConfig = {
   },
   hero: {
     name: 'Franck Tayo',
-    p: ['I develop Full Stack Applications,', 'ML Solutions and Software Systems'],
+    p: ['I build Backend Systems,', 'Distributed Architecture and Scalable Solutions'],
   },
   contact: {
     p: 'Get in touch',
@@ -67,10 +67,12 @@ export const config: TConfig = {
     about: {
       p: 'Introduction',
       h2: 'Overview.',
-      content: `I'm a Computer Science student at Kennesaw State University with a perfect 4.0 GPA, 
-      specializing in full-stack development and machine learning. Experienced with Python, Java, 
-      JavaScript, and various frameworks including React, Node.js, and Django. I combine strong 
-      theoretical knowledge with practical experience in software development and AI applications.`,
+      content: `I'm a Computer Science student at Kennesaw State University graduating in December 2025 with a 4.0 GPA,
+      specializing in backend systems and scalable architecture. Currently a Software Engineer Intern at PACI,
+      where I architect production systems serving 1,000+ users. I focus on backend infrastructure, distributed systems,
+      and data engineering—building reliable, high-performance solutions with technologies like Python, FastAPI,
+      PostgreSQL, AWS, and Docker. My work directly improves production platforms with 99.9% uptime, zero-downtime
+      migrations, and enterprise-grade error handling.`,
     },
     experience: {
       p: 'What I have done so far',

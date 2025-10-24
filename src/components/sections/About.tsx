@@ -47,15 +47,16 @@ const About = () => {
         <div className="modern-card p-8 mb-8">
           <h3 className="text-gray-700 text-[24px] font-bold mb-4">Personal Summary</h3>
           <p className="text-gray-600 text-[17px] leading-[32px] mb-4">
-            As a passionate Computer Science student with a perfect 4.0 GPA at Kennesaw State University,
-            I bring together academic excellence and practical experience in software development. My journey
-            in technology has been marked by continuous learning, innovative problem-solving, and a drive to
-            create impactful solutions.
+            I'm a Computer Science student at Kennesaw State University graduating in December 2025 with a 4.0 GPA,
+            specializing in backend systems and scalable architecture. I focus on building reliable, high-performance
+            solutions using Python, FastAPI, PostgreSQL, AWS, and Docker. My projects achieve real impact: 50,000+ ops/sec
+            throughput, 99.9% uptime under load, and zero-downtime migrations.
           </p>
           <p className="text-gray-600 text-[17px] leading-[32px]">
-            Beyond academics, I'm deeply committed to helping others succeed in their tech journeys. Whether
-            it's mentoring fellow students, contributing to open-source projects, or collaborating with
-            experienced developers, I believe in the power of community and shared knowledge to drive innovation.
+            I'm also an Adobe Student Ambassador and active ColorStack member, committed to making tech accessible and
+            supporting underrepresented students. Currently completing CodePath's Technical Interview Prep program and
+            preparing for full-time Software Engineer roles starting January 2026, with particular interest in database
+            optimization, cloud infrastructure, API development, and high-performance systems.
           </p>
         </div>
 
@@ -101,29 +102,29 @@ const About = () => {
               </p>
             </div>
 
-            {/* Leadership Achievement */}
+            {/* Backend Achievement */}
             <div className="modern-card p-6">
               <div className="flex items-center mb-3">
-                <span className="text-2xl mr-3">👥</span>
-                <h4 className="text-gray-700 text-[18px] font-semibold">Collaborative Development</h4>
+                <span className="text-2xl mr-3">⚙️</span>
+                <h4 className="text-gray-700 text-[18px] font-semibold">Backend Systems Architecture</h4>
               </div>
               <p className="text-gray-600 text-[15px] leading-[26px]">
-                Currently contributing as a Frontend Developer to the PKF Alumni platform, working alongside
-                experienced alumni developers to create meaningful connections between students and graduates
-                in the tech industry.
+                Currently architecting production backend systems at PACI (pkfalumni.com), building scalable
+                infrastructure with PostgreSQL, AWS S3, and FastAPI serving 1,000+ users. Led database migration
+                achieving 40% performance improvement and zero data loss.
               </p>
             </div>
 
-            {/* Innovation Achievement */}
+            {/* Distributed Systems Achievement */}
             <div className="modern-card p-6">
               <div className="flex items-center mb-3">
                 <span className="text-2xl mr-3">🚀</span>
-                <h4 className="text-gray-700 text-[18px] font-semibold">AI Innovation</h4>
+                <h4 className="text-gray-700 text-[18px] font-semibold">High-Performance Systems</h4>
               </div>
               <p className="text-gray-600 text-[15px] leading-[26px]">
-                Developed a Movie Recommendation Platform achieving 90% accuracy using advanced machine learning
-                algorithms, processing 10,000+ entries with sub-2-second response times, showcasing expertise
-                in both AI and performance optimization.
+                Built CacheGrid, a Redis-inspired distributed cache system handling 50,000+ operations/second
+                with sub-10ms P99 latency. Features intelligent eviction policies (LRU/LFU), production-grade
+                Python SDK with automatic failover, and Docker deployment for horizontal scaling.
               </p>
             </div>
           </div>

@@ -39,20 +39,20 @@ export const navLinks: TNavLink[] = [
 
 const services: TService[] = [
   {
-    title: 'Software Engineer',
-    icon: web,
-  },
-  {
-    title: 'Full Stack Developer',
-    icon: mobile,
-  },
-  {
-    title: 'Machine Learning Engineer',
+    title: 'Backend Engineer',
     icon: backend,
   },
   {
-    title: 'Database Developer',
+    title: 'Systems Architect',
+    icon: web,
+  },
+  {
+    title: 'Database Engineer',
     icon: creator,
+  },
+  {
+    title: 'Cloud & DevOps',
+    icon: mobile,
   },
 ];
 
@@ -101,7 +101,36 @@ const technologies: TTechnology[] = [
 
 const experiences: TExperience[] = [
   {
-    title: 'Intern Software Engineer',
+    title: 'Software Engineer Intern',
+    companyName: 'PACI (PKF Alumni Network)',
+    icon: pkf,
+    iconBg: '#E6DEDD',
+    date: 'December 2024 - Present',
+    points: [
+      'Architected end-to-end resume review platform with PostgreSQL schema design, role-based access control, and AWS S3 integration handling 1,000+ file uploads with comprehensive validation',
+      'Led critical database migration from SQLite to PostgreSQL achieving zero data loss, 40% performance improvement, and reduced initialization time from hours to seconds through Python automation with SQLAlchemy ORM',
+      'Implemented FastAPI RESTful endpoints with JWT authentication, multi-part file upload support, comprehensive error handling, and input validation using Pydantic',
+      'Optimized backend performance through PostgreSQL query optimization, connection pooling, advanced indexing strategies, and efficient data access patterns',
+      'Established production-grade deployment pipeline with Docker containerization, Alembic migrations for zero-downtime deployments, and CI/CD automation',
+      'Collaborated with cross-functional teams to deliver scalable backend solutions serving 1,000+ users at pkfalumni.com while maintaining high code quality standards',
+    ],
+  },
+  {
+    title: 'Adobe Student Ambassador',
+    companyName: 'Adobe & Kennesaw State University',
+    icon: intelligentsia, // Will need to add Adobe icon later
+    iconBg: '#FF0000',
+    date: 'August 2024 - Present',
+    points: [
+      'Selected as Adobe Student Ambassador to represent Adobe Creative Cloud on campus and promote creative tools to fellow students',
+      'Lead social media engagement and peer-to-peer advocacy initiatives, sharing experiences using Adobe products for technical documentation, presentations, and project showcases',
+      'Demonstrate how creative tools complement technical skills, helping students discover the intersection of design and development',
+      'Actively participate in the Adobe Ambassador network nationwide, exchanging ideas and staying updated on new Adobe features and student resources',
+      'Balance ambassador responsibilities with senior Computer Science coursework while strengthening skills in product advocacy, digital marketing, and community engagement',
+    ],
+  },
+  {
+    title: 'Software Engineer Intern',
     companyName: 'Intelligentsia SA',
     icon: intelligentsia,
     iconBg: '#383E56',
@@ -113,22 +142,6 @@ const experiences: TExperience[] = [
       'Led cross-functional deployment of scalable migration solutions, ensuring zero downtime during critical system transitions',
       'Conducted technical presentations and knowledge transfer sessions, significantly enhancing cross-team communication and collaboration',
       'Implemented robust error handling and data validation mechanisms, achieving 95% system reliability improvement',
-    ],
-  },
-  {
-    title: 'Backend Developer',
-    companyName: 'PKF Alumni Network',
-    icon: pkf,
-    iconBg: '#E6DEDD',
-    date: 'December 2024 - Present',
-    points: [
-      'Led critical database migration from SQLite to PostgreSQL for enterprise-scale application serving 1,000+ users, implementing MVCC and advanced indexing strategies',
-      'Architected and developed comprehensive resume review service with AWS S3 integration, role-based access control, and RESTful API endpoints using FastAPI',
-      'Implemented robust database schema management with Alembic migrations, ensuring zero-downtime deployments and seamless version control',
-      'Optimized backend performance through PostgreSQL query optimization, connection pooling, and efficient data access patterns',
-      'Developed secure authentication systems with JWT tokens, proper error handling, and comprehensive input validation using Pydantic',
-      'Containerized applications with Docker and established CI/CD pipelines for reliable production deployments',
-      'Collaborated with cross-functional teams to deliver scalable backend solutions while maintaining high code quality standards',
     ],
   },
 ];
