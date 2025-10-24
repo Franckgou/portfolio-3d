@@ -47,15 +47,16 @@ const About = () => {
         <div className="modern-card p-8 mb-8">
           <h3 className="text-gray-700 text-[24px] font-bold mb-4">Personal Summary</h3>
           <p className="text-gray-600 text-[17px] leading-[32px] mb-4">
-            As a passionate Computer Science student with a perfect 4.0 GPA at Kennesaw State University,
-            I bring together academic excellence and practical experience in software development. My journey
-            in technology has been marked by continuous learning, innovative problem-solving, and a drive to
-            create impactful solutions.
+            I'm a Computer Science student at Kennesaw State University graduating in December 2025 with a 4.0 GPA,
+            specializing in backend systems and scalable architecture. I focus on building reliable, high-performance
+            solutions using Python, FastAPI, PostgreSQL, AWS, and Docker. My projects achieve real impact: 50,000+ ops/sec
+            throughput, 99.9% uptime under load, and zero-downtime migrations.
           </p>
           <p className="text-gray-600 text-[17px] leading-[32px]">
-            Beyond academics, I'm deeply committed to helping others succeed in their tech journeys. Whether
-            it's mentoring fellow students, contributing to open-source projects, or collaborating with
-            experienced developers, I believe in the power of community and shared knowledge to drive innovation.
+            I'm also an Adobe Student Ambassador and active ColorStack member, committed to making tech accessible and
+            supporting underrepresented students. Currently completing CodePath's Technical Interview Prep program and
+            preparing for full-time Software Engineer roles starting January 2026, with particular interest in database
+            optimization, cloud infrastructure, API development, and high-performance systems.
           </p>
         </div>
 
@@ -63,6 +64,84 @@ const About = () => {
         <p className="text-gray-600 max-w-3xl text-[17px] leading-[32px] mb-8">
           {config.sections.about.content}
         </p>
+
+        {/* Technical Skills Section */}
+        <div className="modern-card p-8 mb-8">
+          <h3 className="text-gray-700 text-[24px] font-bold mb-6">Technical Skills</h3>
+          <div className="grid md:grid-cols-2 gap-6">
+            {/* Backend */}
+            <div className="space-y-3">
+              <div className="flex items-center gap-2 mb-2">
+                <span className="text-xl">⚙️</span>
+                <h4 className="text-gray-700 text-[16px] font-semibold">Backend</h4>
+              </div>
+              <div className="flex flex-wrap gap-2">
+                {['Python', 'FastAPI', 'Node.js', 'SQLAlchemy'].map((skill) => (
+                  <span
+                    key={skill}
+                    className="px-3 py-1.5 bg-accent/10 text-accent rounded-lg text-[13px] font-medium hover:bg-accent/20 transition-colors"
+                  >
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            {/* Databases */}
+            <div className="space-y-3">
+              <div className="flex items-center gap-2 mb-2">
+                <span className="text-xl">💾</span>
+                <h4 className="text-gray-700 text-[16px] font-semibold">Databases</h4>
+              </div>
+              <div className="flex flex-wrap gap-2">
+                {['PostgreSQL', 'MySQL', 'SQLite', 'Redis'].map((skill) => (
+                  <span
+                    key={skill}
+                    className="px-3 py-1.5 bg-accent/10 text-accent rounded-lg text-[13px] font-medium hover:bg-accent/20 transition-colors"
+                  >
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            {/* Cloud & DevOps */}
+            <div className="space-y-3">
+              <div className="flex items-center gap-2 mb-2">
+                <span className="text-xl">☁️</span>
+                <h4 className="text-gray-700 text-[16px] font-semibold">Cloud & DevOps</h4>
+              </div>
+              <div className="flex flex-wrap gap-2">
+                {['AWS (S3, EC2)', 'Docker', 'CI/CD'].map((skill) => (
+                  <span
+                    key={skill}
+                    className="px-3 py-1.5 bg-accent/10 text-accent rounded-lg text-[13px] font-medium hover:bg-accent/20 transition-colors"
+                  >
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            {/* System Design */}
+            <div className="space-y-3">
+              <div className="flex items-center gap-2 mb-2">
+                <span className="text-xl">🏗️</span>
+                <h4 className="text-gray-700 text-[16px] font-semibold">System Design</h4>
+              </div>
+              <div className="flex flex-wrap gap-2">
+                {['Distributed Caching', 'Horizontal Scaling', 'Fault Tolerance'].map((skill) => (
+                  <span
+                    key={skill}
+                    className="px-3 py-1.5 bg-accent/10 text-accent rounded-lg text-[13px] font-medium hover:bg-accent/20 transition-colors"
+                  >
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
 
         {/* Achievements Section */}
         <div className="bg-secondary rounded-2xl p-8 mb-8">
@@ -101,29 +180,42 @@ const About = () => {
               </p>
             </div>
 
-            {/* Leadership Achievement */}
+            {/* Backend Achievement */}
             <div className="modern-card p-6">
               <div className="flex items-center mb-3">
-                <span className="text-2xl mr-3">👥</span>
-                <h4 className="text-gray-700 text-[18px] font-semibold">Collaborative Development</h4>
+                <span className="text-2xl mr-3">⚙️</span>
+                <h4 className="text-gray-700 text-[18px] font-semibold">Backend Systems Architecture</h4>
               </div>
               <p className="text-gray-600 text-[15px] leading-[26px]">
-                Currently contributing as a Frontend Developer to the PKF Alumni platform, working alongside
-                experienced alumni developers to create meaningful connections between students and graduates
-                in the tech industry.
+                Currently architecting production backend systems at PACI (pkfalumni.com), building scalable
+                infrastructure with PostgreSQL, AWS S3, and FastAPI serving 1,000+ users. Led database migration
+                achieving 40% performance improvement and zero data loss.
               </p>
             </div>
 
-            {/* Innovation Achievement */}
+            {/* Distributed Systems Achievement */}
             <div className="modern-card p-6">
               <div className="flex items-center mb-3">
                 <span className="text-2xl mr-3">🚀</span>
-                <h4 className="text-gray-700 text-[18px] font-semibold">AI Innovation</h4>
+                <h4 className="text-gray-700 text-[18px] font-semibold">High-Performance Systems</h4>
               </div>
               <p className="text-gray-600 text-[15px] leading-[26px]">
-                Developed a Movie Recommendation Platform achieving 90% accuracy using advanced machine learning
-                algorithms, processing 10,000+ entries with sub-2-second response times, showcasing expertise
-                in both AI and performance optimization.
+                Built CacheGrid, a Redis-inspired distributed cache system handling 50,000+ operations/second
+                with sub-10ms P99 latency. Features intelligent eviction policies (LRU/LFU), production-grade
+                Python SDK with automatic failover, and Docker deployment for horizontal scaling.
+              </p>
+            </div>
+
+            {/* Community Leadership */}
+            <div className="modern-card p-6">
+              <div className="flex items-center mb-3">
+                <span className="text-2xl mr-3">🌟</span>
+                <h4 className="text-gray-700 text-[18px] font-semibold">Community Leadership</h4>
+              </div>
+              <p className="text-gray-600 text-[15px] leading-[26px]">
+                Active ColorStack member and Adobe Student Ambassador, committed to making tech accessible
+                and supporting underrepresented students. Promoting diversity in tech through peer advocacy,
+                mentorship, and community engagement while balancing senior Computer Science coursework.
               </p>
             </div>
           </div>

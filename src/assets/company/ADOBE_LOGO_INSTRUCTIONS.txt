@@ -1,0 +1,34 @@
+==========================================
+ADOBE LOGO SETUP INSTRUCTIONS
+==========================================
+
+To enable the Adobe Student Ambassador logo in your portfolio:
+
+1. Place your Adobe logo file in this folder
+2. Name it exactly: adobe.png
+3. Full path: /home/user/portfolio-3d/src/assets/company/adobe.png
+
+SUPPORTED FORMATS:
+- PNG (recommended) - adobe.png
+- JPG/JPEG - adobe.jpg (you'll need to update the import in src/assets/index.ts)
+
+EXAMPLE:
+/home/user/portfolio-3d/src/assets/company/adobe.png
+
+Once you add your adobe.png file here, the logo will automatically appear in:
+- Work Experience timeline (Adobe Student Ambassador section)
+- Experience cards with proper Adobe branding
+
+RECOMMENDED SPECS:
+- Size: 200x200 pixels or larger
+- Format: PNG with transparent background
+- Quality: High resolution for retina displays
+
+IF YOU USE A DIFFERENT FORMAT (e.g., .jpg):
+1. Open: src/assets/index.ts
+2. Find line 24: import adobe from './company/adobe.png';
+3. Change to: import adobe from './company/adobe.jpg';
+
+Everything else is already set up and ready to go!
+
+==========================================
