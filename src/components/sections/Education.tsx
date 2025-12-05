@@ -90,7 +90,7 @@ const Education = () => {
     {
       institution: 'Kennesaw State University',
       program: 'Bachelor of Science in Computer Science',
-      period: 'Aug 2021 - Dec 2025',
+      period: 'Aug 2021 - May 2026',
       gpa: "GPA: 4.0 (President's List)",
       icon: '🎓',
       details: [
@@ -111,6 +111,7 @@ const Education = () => {
         'Big Data Analytics',
         'Cryptography',
         'Software Engineering',
+        'Distributed Systems',
       ],
     },
     {
@@ -169,10 +170,7 @@ const Education = () => {
 
       {/* Additional Learning Section */}
       <div className={`${styles.paddingX} pb-14`}>
-        <motion.div
-          variants={fadeIn('up', 'spring', 0.5, 0.75)}
-          className="modern-card p-8"
-        >
+        <motion.div variants={fadeIn('up', 'spring', 0.5, 0.75)} className="modern-card p-8">
           <h3 className="text-gray-700 text-[20px] font-bold mb-4">
             🚀 Continuous Learning Philosophy
           </h3>
@@ -185,9 +183,7 @@ const Education = () => {
 
           <div className="grid md:grid-cols-2 gap-4 mt-6">
             <div className="bg-gray-50 rounded-xl p-5">
-              <h4 className="text-[16px] font-semibold text-accent mb-2">
-                📚 Academic Excellence
-              </h4>
+              <h4 className="text-[16px] font-semibold text-accent mb-2">📚 Academic Excellence</h4>
               <p className="text-gray-600 text-[14px] leading-[22px]">
                 Maintaining a perfect 4.0 GPA while engaging in challenging coursework across
                 multiple CS disciplines

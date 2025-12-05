@@ -67,7 +67,7 @@ export const config: TConfig = {
     about: {
       p: 'Introduction',
       h2: 'Overview.',
-      content: `I'm a Computer Science student at Kennesaw State University graduating in December 2025 with a 4.0 GPA,
+      content: `I'm a Computer Science student at Kennesaw State University graduating in May 2026 with a 4.0 GPA,
       specializing in backend systems and scalable architecture. Currently a Software Engineer Intern at PACI,
       where I architect production systems serving 1,000+ users. I focus on backend infrastructure, distributed systems,
       and data engineering—building reliable, high-performance solutions with technologies like Python, FastAPI,
